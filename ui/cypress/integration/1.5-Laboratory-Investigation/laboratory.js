@@ -69,7 +69,7 @@ Then("Provide a reason for rejecting a sample", () => {
 
 Given("I have a sample", () => {
   cy.contains("Sample acceptance").click();
-});
+
 When("I accept the sample that it is ready for testing", () => {
   cy.contains("Samples waiting acceptance").click();
   cy.get(".sample-acceptance-trs")
@@ -77,7 +77,7 @@ When("I accept the sample that it is ready for testing", () => {
     .contains("Accept")
     .click();
   cy.contains("Accepted samples").click();
-});
+
 Then("I should allocate the sample to the appropriate technician", () => {
   cy.contains("Tests allocation, Worklist & Results").click();
   cy.contains("Tests allocation");
